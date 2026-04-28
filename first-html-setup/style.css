@@ -1,6 +1,4 @@
-* {
-  outline: 1px solid red !important;
-/* 1. Alles auf Null setzen & Box-Modell fixieren */
+
 * {
     margin: 0;
     padding: 0;
