@@ -1,6 +1,10 @@
 * {
   outline: 1px solid red !important;
 }
+h1, p {
+    margin: 0;
+    padding: 0;
+}
 header{
     text-align: center;
 }
