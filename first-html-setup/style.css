@@ -35,10 +35,16 @@ header, section, div, form {
     gap: 15px;                 /* Abstand zwischen LinkedIn und E-Mail */
 }
 
-/* 5. Das Formular schick untereinander ordnen */
 #button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    flex-direction: row;       /* Sorgt für die Anordnung in einer Reihe */
+    justify-content: center;   /* Zentriert die Gruppe horizontal */
+    align-items: center;       /* Bringt alle Elemente auf eine vertikale Linie */
+    gap: 10px;                 /* Erzeugt einen sauberen Abstand zwischen den Elementen */
+    width: 100%;
+}
+
+/* Optional: Damit das Textfeld nicht zu riesig ist */
+#button input {
+    width: auto;
 }
