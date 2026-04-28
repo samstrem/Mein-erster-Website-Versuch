@@ -60,3 +60,20 @@ header, section, div, form {
 #button input {
     width: auto;
 }
+.profile-pic {
+    display: block;      /* Ermöglicht das Zentrieren */
+    margin: 20px auto;   /* Zentriert das Bild horizontal */
+    max-width: 300px;    /* Begrenzt die Breite (600px ist oft zu groß für Portrait) */
+    width: 100%;         /* Macht es responsiv */
+    
+    /* Der "Clean Look" */
+    border-radius: 12px;           /* Sanft abgerundete Ecken */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Weicher Schatten für Tiefe */
+    border: 4px solid white;       /* Eleganter weißer Rahmen */
+    
+    transition: transform 0.3s ease; /* Animation für später */
+}
+
+.profile-pic:hover {
+    transform: scale(1.02); /* Minimales Vergrößern beim Drüberfahren */
+}
