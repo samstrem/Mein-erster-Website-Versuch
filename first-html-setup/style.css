@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
     
     /* UPDATE HIER: */
-    font-family: 'Inter', sans-serif; /* Fließtext */
+    font-family: 'Roboto', sans-serif; /* Fließtext */
     color: #333; 
     line-height: 1.6;
     padding: 20px;
@@ -25,10 +25,9 @@ body {
 
 /* NEU: Überschriften mit der Jakarta Sans stylen */
 h1, h2 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Schön fett für die Struktur */
     color: #111;
-    letter-spacing: -0.02em; /* Macht den modernen Look aus */
     margin-bottom: 10px;
 }
 
