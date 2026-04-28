@@ -1,19 +1,44 @@
 * {
   outline: 1px solid red !important;
-}
-h1, p {
+/* 1. Alles auf Null setzen & Box-Modell fixieren */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-header{
-    text-align: center;
+
+/* 2. Den Body als Container für die gesamte Seite nutzen */
+body {
+    display: flex;
+    flex-direction: column;    /* Alles untereinander stapeln */
+    align-items: center;       /* Horizontal zentrieren */
+    justify-content: center;  /* Vertikal zentrieren */
+    
+    min-height: 100vh;         /* Nutzt die volle Fensterhöhe */
+    font-family: Arial, sans-serif; /* Nur für die Optik */
+    line-height: 1.6;
+    padding: 20px;             /* Kleiner Puffer zum Bildschirmrand */
 }
-#about{
+
+/* 3. Text innerhalb der Blöcke zentrieren */
+header, section, div, form {
     text-align: center;
+    width: 100%;               /* Nimmt die Breite des Body ein */
+    max-width: 600px;          /* Verhindert, dass der Text zu breit läuft */
+    margin-bottom: 20px;       /* Abstand zwischen den Sektionen */
 }
-#links{
-    text-align: center;
+
+/* 4. Die Links nebeneinander zentrieren */
+#links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;                 /* Abstand zwischen LinkedIn und E-Mail */
 }
-#button{
-    text-align: center;
+
+/* 5. Das Formular schick untereinander ordnen */
+#button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
