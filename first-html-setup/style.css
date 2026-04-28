@@ -7,17 +7,29 @@
     box-sizing: border-box;
 }
 
-/* 2. Den Body als Container für die gesamte Seite nutzen */
+/* 2. Den Body als Container nutzen */
 body {
     display: flex;
-    flex-direction: column;    /* Alles untereinander stapeln */
-    align-items: center;       /* Horizontal zentrieren */
-    justify-content: center;  /* Vertikal zentrieren */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     
-    min-height: 100vh;         /* Nutzt die volle Fensterhöhe */
-    font-family: Arial, sans-serif; /* Nur für die Optik */
+    /* UPDATE HIER: */
+    font-family: 'Inter', sans-serif; /* Fließtext */
+    color: #333; 
     line-height: 1.6;
-    padding: 20px;             /* Kleiner Puffer zum Bildschirmrand */
+    padding: 20px;
+    background-color: #fcfcfc; /* Ein ganz leichtes Off-White wirkt cleaner */
+}
+
+/* NEU: Überschriften mit der Jakarta Sans stylen */
+h1, h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: -0.02em; /* Macht den modernen Look aus */
+    margin-bottom: 10px;
 }
 
 /* 3. Text innerhalb der Blöcke zentrieren */
@@ -35,7 +47,7 @@ header, section, div, form {
     gap: 15px;                 /* Abstand zwischen LinkedIn und E-Mail */
 }
 
-#button {
+#contact_form {
     display: flex;
     flex-direction: row;       /* Sorgt für die Anordnung in einer Reihe */
     justify-content: center;   /* Zentriert die Gruppe horizontal */
