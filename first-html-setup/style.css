@@ -60,7 +60,7 @@ header, section, div, form {
 #button input {
     width: auto;
 }
-.profile-pic {
+.img{
     display: block;      /* Ermöglicht das Zentrieren */
     margin: 20px auto;   /* Zentriert das Bild horizontal */
     max-width: 300px;    /* Begrenzt die Breite (600px ist oft zu groß für Portrait) */
