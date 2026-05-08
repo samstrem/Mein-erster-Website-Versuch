@@ -768,8 +768,7 @@ button:hover {
 
     margin-bottom: 40px;
 
-    box-shadow: 10px 10px 0px #eee; /* Ein moderner "Offset"-Schatten */
-
+   
 }
 
 
@@ -884,14 +883,6 @@ header, section, div, form {
 
 }
 
-Dein CSS ist aktuell etwas "verstopft", weil einige Teile doppelt vorkommen oder sich gegenseitig überschreiben (z. B. der body).
-
-Um die Navbar professionell oben einzubauen, sie zentriert auszurichten und einen edlen Hintergrund zu schaffen, der zu einem Business Analyst passt, habe ich dein CSS aufgeräumt und die Navbar-Logik hinzugefügt.
-
-Hier ist das optimierte CSS:
-
-1. Das CSS (Ersetze dein altes CSS damit)
-CSS
 /* 1. Global Reset */
 * {
     margin: 0;
@@ -1022,8 +1013,8 @@ button:hover {
     max-width: 250px;
     height: auto;
     filter: grayscale(30%);
-    box-shadow: 15px 15px 0px #eef2f1;
-    margin-bottom: 40px;
+    
+    margin-bottom: 60px;
 }
 
 /* Footer-Links zentriert */
