@@ -14,12 +14,12 @@ contactForm.addEventListener('submit', function(event) {
         }
     }).then(response => {
         if (response.ok) {
-            alert("Erfolg! Deine Nachricht wurde an Samuel gesendet.");
+            alert("Message sent successfully. Samuel will get back to you shortly.");
             contactForm.reset();
         } else {
-            alert("Hoppla! Da gab es ein Problem beim Senden.");
+            alert("An error occurred. Please try again later or contact me directly via email.");
         }
     }).catch(error => {
-        alert("Fehler: Verbindung zum Server fehlgeschlagen.");
+        alert("Connection failed. Please try again.");
     });
 });
