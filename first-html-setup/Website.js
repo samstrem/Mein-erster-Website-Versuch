@@ -23,3 +23,14 @@ contactForm.addEventListener('submit', function(event) {
         alert("Connection failed. Please try again.");
     });
 });
+
+window.onscroll = function() {
+    const nav = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) {
+        nav.style.boxShadow = "0 4px 15px rgba(0,0,0,0.1)";
+        nav.style.height = "60px";
+    } else {
+        nav.style.boxShadow = "none";
+        nav.style.height = "70px";
+    }
+};
