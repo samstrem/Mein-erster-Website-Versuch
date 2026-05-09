@@ -1,11 +1,11 @@
 const contactForm = document.getElementById('contact_form');
 
 contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Wir verhindern das Neuladen
+    event.preventDefault(); 
 
     const formData = new FormData(contactForm);
 
-    // Wir schicken die Daten "heimlich" im Hintergrund an Formspree
+
     fetch(contactForm.action, {
         method: 'POST',
         body: formData,
