@@ -618,3 +618,22 @@ p {
     text-align: center;  /* Zentriert den Text innerhalb des Blocks */
     line-height: 1.8;    /* Macht den Filler-Text deutlich lesbarer */
 }
+
+.background {
+    /* Macht das Bild komplett schwarz-weiß */
+    filter: grayscale(100%);
+
+    /* Positioniert das Bild fixiert im Hintergrund */
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Füllt die gesamte Bildschirmhöhe */
+    object-fit: cover; /* Sorgt dafür, dass das Bild nicht verzerrt wird */
+    
+    /* Legt das Bild hinter alle anderen Elemente */
+    z-index: -1; 
+    
+    /* Optional: Macht das Bild etwas dezenter, damit Text besser lesbar ist */
+    opacity: 1; 
+}
