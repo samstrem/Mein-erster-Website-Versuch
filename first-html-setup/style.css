@@ -1,639 +1,578 @@
-
-CSS
-/* Grundlegendes Styling */
-body {
-  margin: 0;
-  padding-top: 70px; /* Platz lassen, damit der Content nicht unter der Navbar verschwindet */
-  font-family: Arial, sans-serif;
+:root {
+    --bg: #f7f6f3;
+    --fg: #0f0f0f;
+    --muted: #8a8a8a;
+    --border: #e4e1db;
+    --white: #ffffff;
+    --nav-h: 68px;
 }
 
-.navbar {
-  position: fixed;    /* Fixiert die Leiste oben */
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #ffffff; /* Weißer Hintergrund */
-  display: flex;
-  justify-content: space-between; /* Logo links, Links rechts */
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Eleganter Schatten */
-  z-index: 1000;      /* Sorgt dafür, dass die Navbar über allem anderen liegt */
-}
-
-.logo {
-  margin-left: 20px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin-right: 20px;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #555;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #007bff; /* Farbe ändert sich beim Drüberfahren */
-}
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-}
-
-
-
-/* 2. Den Body als Container für die gesamte Seite nutzen */
-
-body {
-
-    display: flex;
-
-    flex-direction: column;    /* Alles untereinander stapeln */
-
-    align-items: center;       /* Horizontal zentrieren */
-
-    justify-content: center;  /* Vertikal zentrieren */
-
-    /* Grund-Einstellungen */
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-}
-
-
-
-body {
-
-    font-family: 'Roboto', sans-serif;
-
-    background-color: #fcfcfc; /* Ganz leichtes Off-White für edlen Look */
-
-    color: #333;
-
-    line-height: 1.6;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    padding: 40px 20px;
-
-}
-
-
-
-/* Header-Bereich */
-
-header {
-
-    text-align: center;
-
-    margin-bottom: 60px;
-
-}
-
-
-
-header h1 {
-
-    font-weight: 600;
-
-    font-size: 2.5rem;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    margin-bottom: 10px;
-
-}
-
-
-
-header p {
-
-    font-weight: 400;
-
-    color: #888;
-
-    font-style: italic;
-
-}
-
-
-
-/* Sektionen */
-
-section {
-
-    max-width: 600px;
-
-    width: 100%;
-
-    margin-bottom: 50px;
-
-    text-align: center;
-
-}
-
-
-
-h2 {
-
-    font-weight: 400;
-
-    font-size: 1.2rem;
-
-    text-transform: uppercase;
-
-    border-bottom: 1px solid #eee;
-
-    padding-bottom: 10px;
-
-    margin-bottom: 20px;
-
-    letter-spacing: 1px;
-
-}
-
-
-
-/* Formular Design */
-
-#contact_form {
-
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 4px;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sehr dezenter Schatten */
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 15px;
-
-    margin-bottom: 60px;
-
-}
-
-
-
-label {
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-
-    text-transform: uppercase;
-
-    color: #555;
-
-}
-
-
-
-input, select {
-
-    padding: 12px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 2px;
-
-    font-family: inherit;
-
-    transition: border-color 0.3s;
-
-}
-
-
-
-input:focus, select:focus {
-
-    outline: none;
-
-    border-color: #333;
-
-}
-
-
-
-button {
-
-    background-color: #333;
-
-    color: white;
-
-    padding: 12px;
-
-    border: none;
-
-    border-radius: 2px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    transition: background 0.3s;
-
-    margin-top: 10px;
-
-}
-
-
-
-button:hover {
-
-    background-color: #000;
-
-}
-
-
-
-/* Profilbild */
-
-.profile_pic {
-
-    border-radius: 2px; /* Eckig wirkt oft moderner/edler als rund */
-
-    max-width: 100%;
-
-    height: auto;
-
-    filter: grayscale(20%); /* Ein leichter Grauschleier wirkt oft edler */
-
-    transition: filter 0.5s;
-
-    margin-bottom: 40px;
-
-   
-}
-
-
-
-.profile_pic:hover {
-
-    filter: grayscale(0%);
-
-}
-
-
-
-/* Links */
-
-#links {
-
-    display: flex;
-
-    gap: 30px;
-
-}
-
-
-
-#links a {
-
-    text-decoration: none;
-
-    color: #333;
-
-    font-size: 0.9rem;
-
-    border-bottom: 1px solid transparent;
-
-    transition: border-color 0.3s;
-
-}
-
-
-
-#links a:hover {
-
-    border-color: #333;
-
-}
-
-    min-height: 100vh;         /* Nutzt die volle Fensterhöhe */
-
-    font-family: Arial, sans-serif; /* Nur für die Optik */
-
-    line-height: 1.6;
-
-    padding: 20px;             /* Kleiner Puffer zum Bildschirmrand */
-
-}
-
-
-
-/* 3. Text innerhalb der Blöcke zentrieren */
-
-header, section, div, form,{
-
-    text-align: center;
-
-    width: 100%;               /* Nimmt die Breite des Body ein */
-
-    max-width: 600px;          /* Verhindert, dass der Text zu breit läuft */
-
-    margin-bottom: 20px;       /* Abstand zwischen den Sektionen */
-
-}
-
-
-
-/* 4. Die Links nebeneinander zentrieren */
-
-#links {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;                 /* Abstand zwischen LinkedIn und E-Mail */
-
-}
-
-
-
-#button {
-
-    display: flex;
-
-    flex-direction: row;       /* Sorgt für die Anordnung in einer Reihe */
-
-    justify-content: center;   /* Zentriert die Gruppe horizontal */
-
-    align-items: center;       /* Bringt alle Elemente auf eine vertikale Linie */
-
-    gap: 10px;                 /* Erzeugt einen sauberen Abstand zwischen den Elementen */
-
-    width: 100%;
-
-}
-
-
-
-/* Optional: Damit das Textfeld nicht zu riesig ist */
-
-#button input {
-
-    width: auto;
-
-}
-
-/* 1. Global Reset */
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Body-Styling & Hintergrund */
-body {
-    font-family: 'Roboto', sans-serif;
-    /* Ein subtiler, professioneller Verlauf (Business-Look) */
-    background: radial-gradient(circle at top, #ffffff 0%, #f4f7f6 100%);
-    color: #333;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 100px; /* Platz für die fixe Navbar */
-    padding-bottom: 40px;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-h);
 }
 
-/* 3. Die Navbar oben */
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Navbar ─── */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
-    background-color: rgba(255, 255, 255, 0.95); /* Leicht transparent */
-    backdrop-filter: blur(5px); /* Edler Milchglas-Effekt */
+    height: var(--nav-h);
+    background: rgba(247, 246, 243, 0.93);
+    backdrop-filter: blur(14px);
     display: flex;
-    justify-content: center; /* Zentriert den Inhalt der Navbar */
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    justify-content: space-between;
+    padding: 0 52px;
+    border-bottom: 1px solid transparent;
     z-index: 1000;
+    transition: border-color 0.4s, height 0.3s;
+}
+
+.navbar.scrolled {
+    border-bottom-color: var(--border);
+    height: 58px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    height: 38px;
+    overflow: hidden;
+}
+
+.nav-logo img {
+    height: 52px;
+    width: auto;
+    opacity: 0.9;
+    display: block;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Abstand zwischen den Links */
+    gap: 44px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: 700;
+    color: var(--muted);
+    font-size: 0.73rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+    letter-spacing: 1.8px;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: #007bff; /* Ein seriöses Blau für Business Analysten */
+    color: var(--fg);
 }
 
-/* 4. Header & Sektionen */
-header, section {
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 60px;
+/* ─── Hero ─── */
+.hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    padding-top: var(--nav-h);
 }
 
-header h1 {
-    font-weight: 600;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-header p {
-    color: #888;
-    font-style: italic;
-}
-
-/* 5. Das Formular (Verbessert) */
-#contact_form {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    width: 100%;
-    max-width: 600px; /* Kompakter für bessere Lesbarkeit */
+.hero-content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-input, select, textarea {
-    padding: 12px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-/* Button Gruppe (Zentriert nebeneinander) */
-.button-group {
-    display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    padding: 80px 52px;
+    gap: 0;
+}
+
+.hero-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.8rem, 7vw, 7rem);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -2px;
+    color: var(--fg);
+    margin-bottom: 40px;
+}
+
+.hero-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 32px;
+}
+
+.hero-desc {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.85;
+    max-width: 400px;
+    margin-bottom: 48px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.btn-dark {
+    display: inline-block;
+    background: var(--fg);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 34px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: opacity 0.2s;
+}
+
+.btn-dark:hover {
+    opacity: 0.65;
+}
+
+.hero-link {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 0.73rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-link:hover {
+    color: var(--fg);
+    border-bottom-color: var(--fg);
+}
+
+.hero-photo {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 48% 12%;
+    display: block;
+    filter: grayscale(100%);
+    transition: transform 0.8s;
+}
+
+.hero-photo:hover img {
+    transform: scale(1.02);
+}
+
+/* ─── Skills ─── */
+.skills-section {
+    border-top: 1px solid var(--border);
+    padding: 96px 52px;
+}
+
+.skills-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 52px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--fg);
+}
+
+.section-label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+    color: #555;
+    font-weight: 400;
+}
+
+.skill-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--border);
+    flex-shrink: 0;
+}
+
+/* ─── CV Page ─── */
+.cv-wrap {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 80px) 48px 100px;
+}
+
+.cv-page-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 72px;
+    gap: 40px;
+}
+
+.cv-page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cv-contact-meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 2;
+    text-align: right;
+}
+
+.cv-block {
+    margin-bottom: 64px;
+}
+
+.cv-block-label {
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #c0bcb6;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+}
+
+.cv-entry {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 20px;
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cv-entry-date {
+    font-size: 0.76rem;
+    color: #c0bcb6;
+    text-align: right;
+    padding-top: 2px;
+    white-space: nowrap;
+}
+
+.cv-entry-title {
+    font-weight: 600;
+    font-size: 0.94rem;
+    margin-bottom: 3px;
+    color: var(--fg);
+}
+
+.cv-entry-org {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.cv-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.cv-bullets li {
+    font-size: 0.84rem;
+    color: #666;
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.cv-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #d4d0cb;
+}
+
+.cv-skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    gap: 0;
+}
+
+.cv-skills-list li {
+    font-size: 0.85rem;
+    color: #666;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-lang-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.cv-lang-item {
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.cv-lang-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: var(--fg);
+}
+
+.cv-lang-level {
+    font-size: 0.78rem;
+    color: var(--muted);
+}
+
+/* ─── Contact Page ─── */
+.contact-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: calc(var(--nav-h) + 100px) 48px 100px;
+}
+
+.contact-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 14px;
+}
+
+.contact-sub {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin-bottom: 60px;
+    line-height: 1.7;
+}
+
+#contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #c0bcb6;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.94rem;
+    color: var(--fg);
+    outline: none;
+    appearance: none;
+    transition: border-color 0.25s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-bottom-color: var(--fg);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #c8c5bf;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.94rem;
+    color: var(--fg);
+    outline: none;
+    resize: none;
+    min-height: 120px;
+    transition: border-color 0.25s;
+    line-height: 1.7;
 }
 
 button {
-    background-color: #333;
-    color: white;
-    padding: 12px 30px;
+    align-self: flex-start;
+    background: var(--fg);
+    color: var(--white);
+    padding: 15px 36px;
     border: none;
-    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 2px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: opacity 0.2s;
+    margin-top: 4px;
 }
 
 button:hover {
-    background-color: #000;
-    transform: translateY(-2px); /* Kleiner Hover-Effekt */
+    opacity: 0.6;
 }
 
-/* Profilbild */
-.profile_pic {
-    border-radius: 4px;
-    max-width: 250px;
-    height: auto;
-    filter: grayscale(30%);
-    
-    margin-bottom: 60px;
-}
+/* ─── Responsive ─── */
+@media (max-width: 960px) {
+    .navbar {
+        padding: 0 28px;
+    }
 
-/* Footer-Links zentriert */
-#links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-2. Die passende HTML-Struktur
-Damit das CSS greift, sollte dein HTML am Anfang so aussehen:
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
 
+    .hero-content {
+        padding: 72px 28px 56px;
+    }
 
-@media (max-width: 600px) {
-    /* 1. Navbar: Links untereinander oder enger zusammen */
+    .hero-name {
+        font-size: clamp(3rem, 14vw, 5rem);
+        letter-spacing: -1px;
+    }
+
+    .hero-photo {
+        height: 480px;
+    }
+
+    .skills-section {
+        padding: 72px 28px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-wrap {
+        padding: calc(var(--nav-h) + 48px) 28px 72px;
+    }
+
+    .cv-page-header {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-contact-meta {
+        text-align: left;
+    }
+
+    .cv-entry {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-entry-date {
+        text-align: left;
+        order: -1;
+    }
+
+    .cv-skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-lang-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-wrap {
+        padding: calc(var(--nav-h) + 60px) 28px 72px;
+    }
+
     .nav-links {
-        gap: 15px; /* Weniger Abstand zwischen den Links */
+        gap: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cv-lang-grid {
+        grid-template-columns: 1fr;
     }
 
     .nav-links a {
-        font-size: 0.75rem; /* Schrift etwas kleiner auf dem Handy */
-    }
-
-    /* 2. Body: Weniger Abstand nach oben */
-    body {
-        padding-top: 80px; 
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    /* 3. Überschriften anpassen */
-    header h1 {
-        font-size: 1.6rem; /* Damit der Titel nicht umbricht */
+        font-size: 0.65rem;
         letter-spacing: 1px;
     }
-
-    /* 4. Formular: Padding reduzieren */
-    #contact_form {
-        padding: 20px;
-    }
-
-    /* 5. Buttons nebeneinander zentrieren (falls sie zu breit sind) */
-    .button-group {
-        flex-direction: column; /* Buttons untereinander auf dem Handy */
-        width: 100%;
-    }
-
-    button {
-        width: 100%; /* Button über die volle Breite */
-    }
-
-    /* 6. Footer Links */
-    #links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-html {
-    scroll-behavior: smooth; /* Sorgt für ein sanftes Gleiten statt einem harten Sprung */
-    scroll-padding-top: 80px; /* GENAU HIER: Der Wert sollte etwas größer sein als deine Navbar-Höhe */
-}
-
-p {
-    max-width: 800px;    /* Verhindert, dass der Text zu breit läuft */
-    width: 90%;          /* Sorgt für Puffer auf kleinen Bildschirmen */
-    margin-left: auto;   /* Schiebt den Block von links in die Mitte */
-    margin-right: auto;  /* Schiebt den Block von rechts in die Mitte */
-    text-align: center;  /* Zentriert den Text innerhalb des Blocks */
-    line-height: 1.8;    /* Macht den Filler-Text deutlich lesbarer */
-}
-
-.background {
-    /* Macht das Bild komplett schwarz-weiß */
-    filter: grayscale(100%);
-
-    /* Positioniert das Bild fixiert im Hintergrund */
-    
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Füllt die gesamte Bildschirmhöhe */
-    object-fit: cover; /* Sorgt dafür, dass das Bild nicht verzerrt wird */
-    
-    /* Legt das Bild hinter alle anderen Elemente */
-    z-index: -1; 
-    
-    /* Optional: Macht das Bild etwas dezenter, damit Text besser lesbar ist */
-    opacity: 1; 
 }
