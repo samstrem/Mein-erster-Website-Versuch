@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="Kontakt — Samuel Stremnitzer"/>
+    <meta name="keywords" content="Samuel Stremnitzer Kontakt, Career Opportunity, Bewerbung, Wien, Digital Business, Anfrage"/>
     <meta name="author" content="Samuel Stremnitzer"/>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +33,7 @@
     <form action="https://formspree.io/f/xgodneov" method="POST" id="contact_form">
         <div class="form-field">
             <label for="contact-name">Dein Name</label>
-            <input id="contact-name" type="text" name="Name" placeholder="Max Mustermann"/>
+            <input id="contact-name" type="text" name="Name" placeholder="Max Mustermann" maxlength="100"/>
         </div>
         <div class="form-field">
             <label for="reason">Anliegen</label>
@@ -45,7 +46,7 @@
         </div>
         <div class="form-field">
             <label for="message">Nachricht</label>
-            <textarea id="message" name="Message" placeholder="Deine Nachricht an Samuel …"></textarea>
+            <textarea id="message" name="Message" placeholder="Deine Nachricht an Samuel …" maxlength="2000"></textarea>
         </div>
         <button type="submit">Absenden</button>
     </form>
