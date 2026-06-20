@@ -1,38 +1,141 @@
-<DOCTYPE html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <title>Curriculum Vitae</title>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <meta name="description" content="Samuel Stremnitzer — Dedicated Business Analyst specializing in data-driven insights, process optimization, and bridging the gap between business needs and technical solutions."/>
-        <meta name="keywords" content="Business Analyst, Requirements Engineering, Process Optimization, Data Analysis, Samuel Stremnitzer, Agile, BPMN">
-        <meta name="author" content="Samuel Stremnitzer"/>
-
-    </head>
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Curriculum Vitae — Samuel Stremnitzer"/>
+    <meta name="author" content="Samuel Stremnitzer"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <title>CV — Samuel Stremnitzer</title>
+</head>
 <body>
 
-<nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="basic_html.html">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-    <li><a href="CV.html">CV</a></li>
-  </ul>
+<nav class="navbar" id="navbar">
+    <a href="basic_html.html" class="nav-logo">
+        <img src="src/Logo.png" alt="SS">
+    </a>
+    <ul class="nav-links">
+        <li><a href="basic_html.html">Home</a></li>
+        <li><a href="basic_html.html#skills">Skills</a></li>
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
 </nav>
-<header> 
-    <h1>Bridging the gap between Business Needs and Technical Solutions.</h1>
-</header>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="cv-wrap">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="cv-page-header">
+        <h1>Samuel<br>Stremnitzer</h1>
+        <div class="cv-contact-meta">
+            Wien, Österreich<br>
+            sam.strem@hotmail.com<br>
+            +43 676 770 63 61
+        </div>
+    </div>
+
+    <div class="cv-block">
+        <p class="cv-block-label">Berufserfahrung</p>
+
+        <div class="cv-entry">
+            <div>
+                <div class="cv-entry-title">Inventarverwaltung &amp; IT-Support</div>
+                <div class="cv-entry-org">Bundesministerium für Land- und Forstwirtschaft, Klima- und Umweltschutz</div>
+                <ul class="cv-bullets">
+                    <li>Eigenverantwortliche Abwicklung des operativen Einkaufs mit buchhalterischer Erfassung in SAP</li>
+                    <li>Technische Administration von Videokonferenz- und Collaboration-Systemen</li>
+                    <li>Ganzheitliches Mobile Device Management</li>
+                </ul>
+            </div>
+            <div class="cv-entry-date">2024 – 2026</div>
+        </div>
+
+        <div class="cv-entry">
+            <div>
+                <div class="cv-entry-title">Einzelhandelsmitarbeiter</div>
+                <div class="cv-entry-org">SPAR Österreichische Warenhandels-AG</div>
+                <ul class="cv-bullets">
+                    <li>Bedarfsorientierte Warenbestellung sowie Warenannahme und -lagerung</li>
+                    <li>Reklamationsmanagement</li>
+                </ul>
+            </div>
+            <div class="cv-entry-date">2023 – 2024</div>
+        </div>
+
+        <div class="cv-entry">
+            <div>
+                <div class="cv-entry-title">Laborassistenz im Zentrallabor</div>
+                <div class="cv-entry-org">Salzburger Landeskliniken</div>
+                <ul class="cv-bullets">
+                    <li>Systemseitige Erfassung und Validierung von Patientendaten sowie Probenmanagement</li>
+                    <li>Präanalytische Probenvorbereitung und fachgerechte Klassifizierung nach medizinischen Standards</li>
+                    <li>Professionelle Patientenkommunikation und Instruktion zur qualitätsgesicherten Probenentnahme</li>
+                </ul>
+            </div>
+            <div class="cv-entry-date">2022 – 2023</div>
+        </div>
+    </div>
+
+    <div class="cv-block">
+        <p class="cv-block-label">Bildungsweg</p>
+
+        <div class="cv-entry">
+            <div>
+                <div class="cv-entry-title">Digital Business — Bachelor</div>
+                <div class="cv-entry-org">FHWien der WKW</div>
+                <ul class="cv-bullets">
+                    <li>Business Intelligence &amp; Datenanalyse: SQL, Datenmodellierung, Visualisierung, Reporting</li>
+                    <li>Prozessmanagement &amp; Digitalisierung: Geschäftsprozessanalyse, Enterprise Architecture, BPMN</li>
+                    <li>Technologie &amp; Entwicklung: JavaScript, Python, Web-Technologien, IT-Security</li>
+                    <li>Projektmanagement: Koordination von Digitalprojekten, Agile-Methodik</li>
+                </ul>
+            </div>
+            <div class="cv-entry-date">09.2025 – heute</div>
+        </div>
+
+        <div class="cv-entry">
+            <div>
+                <div class="cv-entry-title">Matura — Fachrichtung Sozialmanagement</div>
+                <div class="cv-entry-org">Höhere Lehranstalt für wirtschaftliche Berufe, Caritas Schule</div>
+            </div>
+            <div class="cv-entry-date">2016 – 2021</div>
+        </div>
+    </div>
+
+    <div class="cv-block">
+        <p class="cv-block-label">Fähigkeiten</p>
+        <ul class="cv-skills-list">
+            <li>Kollaborative Teamkoordination &amp; Ressourcenplanung</li>
+            <li>Analytisches Denken &amp; datengetriebene Problemlösung</li>
+            <li>AI- / LLM-Tools zur Effizienzsteigerung</li>
+            <li>Grundlagen der Softwareentwicklung</li>
+            <li>Automatisierung von Prozessen und Workflows</li>
+            <li>Digitale Transformation</li>
+        </ul>
+    </div>
+
+    <div class="cv-block">
+        <p class="cv-block-label">Sprachen</p>
+        <div class="cv-lang-grid">
+            <div class="cv-lang-item">
+                <div class="cv-lang-name">Deutsch</div>
+                <div class="cv-lang-level">Muttersprache</div>
+            </div>
+            <div class="cv-lang-item">
+                <div class="cv-lang-name">Englisch</div>
+                <div class="cv-lang-level">Fließend</div>
+            </div>
+            <div class="cv-lang-item">
+                <div class="cv-lang-name">Spanisch</div>
+                <div class="cv-lang-level">Grundkenntnisse</div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <script src="Website.js"></script>
-
 </body>
+</html>
