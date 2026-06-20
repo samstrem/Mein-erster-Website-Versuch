@@ -1,3 +1,25 @@
+// Custom toast — replaces browser alert()
+function showToast(message, type) {
+    let toast = document.getElementById('ss-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'ss-toast';
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+    }
+
+    toast.textContent = message;
+    toast.className = 'toast' + (type === 'error' ? ' toast-error' : '');
+
+    void toast.offsetWidth; // reflow so transition fires every time
+    toast.classList.add('show');
+
+    clearTimeout(toast._timer);
+    toast._timer = setTimeout(function () {
+        toast.classList.remove('show');
+    }, 4500);
+}
+
 // Navbar scroll state
 const navbar = document.getElementById('navbar');
 
@@ -30,12 +52,12 @@ if (contactForm) {
         }
 
         if (containsFile) {
-            alert('Dateianhänge sind nicht erlaubt. Bitte nur Text eingeben.');
+            showToast('Dateianhänge sind nicht erlaubt.', 'error');
             return;
         }
 
         if (cleanData.toString().length > maxChars) {
-            alert('Deine Nachricht ist zu lang. Bitte fass dich etwas kürzer.');
+            showToast('Deine Nachricht ist zu lang. Bitte fass dich etwas kürzer.', 'error');
             return;
         }
 
@@ -48,13 +70,13 @@ if (contactForm) {
             }
         }).then(function (response) {
             if (response.ok) {
-                alert('Message sent successfully. Samuel will get back to you shortly.');
+                showToast('Nachricht gesendet. Samuel meldet sich in Kürze.');
                 contactForm.reset();
             } else {
-                alert('An error occurred. Please try again later.');
+                showToast('Ein Fehler ist aufgetreten. Bitte versuche es erneut.', 'error');
             }
         }).catch(function () {
-            alert('Connection failed. Please try again.');
+            showToast('Verbindung fehlgeschlagen. Bitte versuche es erneut.', 'error');
         });
     });
 }
