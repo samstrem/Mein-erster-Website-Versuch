@@ -496,6 +496,37 @@ button:hover {
     opacity: 0.6;
 }
 
+/* ─── Toast Notification ─── */
+.toast {
+    position: fixed;
+    bottom: 40px;
+    right: 48px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 2px solid var(--fg);
+    padding: 20px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.84rem;
+    color: var(--fg);
+    max-width: 320px;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.toast.toast-error {
+    border-top-color: #999;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 960px) {
     .navbar {
