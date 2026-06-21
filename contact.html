@@ -27,13 +27,26 @@
 </nav>
 
 <div class="contact-wrap">
-    <h1 class="contact-heading">Schreib<br>mir.</h1>
+    <h1 class="contact-heading">Schreib<br>mir!</h1>
     <p class="contact-sub">Ich freue mich über Career Opportunities, allgemeine Anfragen oder Feedback. Ich melde mich so schnell wie möglich.</p>
 
     <form action="https://formspree.io/f/xgodneov" method="POST" id="contact_form">
         <div class="form-field">
-            <label for="contact-name">Dein Name</label>
+            <label for="anrede">Anrede</label>
+            <select id="anrede" name="Anrede">
+                <option value="">— bitte wählen —</option>
+                <option value="Herr">Herr</option>
+                <option value="Frau">Frau</option>
+                <option value="Divers">Divers</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="contact-name">Name</label>
             <input id="contact-name" type="text" name="Name" placeholder="Max Mustermann" maxlength="100"/>
+        </div>
+        <div class="form-field">
+            <label for="contact-email">E-Mail</label>
+            <input id="contact-email" type="email" name="Email" placeholder="max@beispiel.at" maxlength="150"/>
         </div>
         <div class="form-field">
             <label for="reason">Anliegen</label>
