@@ -50,6 +50,15 @@ function showToast(message, type) {
     }, 4500);
 }
 
+// Active nav link
+var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a').forEach(function (link) {
+    var href = link.getAttribute('href').split('#')[0];
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+        link.classList.add('active');
+    }
+});
+
 // Navbar scroll state
 const navbar = document.getElementById('navbar');
 
@@ -61,12 +70,43 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Inline form message (above submit button)
+function showFormMsg(message, type) {
+    var el = document.getElementById('form-msg');
+    if (!el) return;
+    el.textContent = message;
+    el.className = 'form-msg' + (type === 'error' ? ' error' : '');
+    void el.offsetWidth;
+    el.classList.add('show');
+    clearTimeout(el._timer);
+    el._timer = setTimeout(function () { el.classList.remove('show'); }, 5000);
+}
+
 // Contact form handling
 const contactForm = document.getElementById('contact_form');
 
 if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
+
+        const emailEl = contactForm.querySelector('#contact-email');
+        const messageEl = contactForm.querySelector('#message');
+
+        if (!emailEl.value.trim()) {
+            showFormMsg('Bitte gib deine E-Mail-Adresse ein.', 'error');
+            emailEl.focus();
+            return;
+        }
+        if (!emailEl.validity.valid) {
+            showFormMsg('Bitte gib eine gültige E-Mail-Adresse ein.', 'error');
+            emailEl.focus();
+            return;
+        }
+        if (!messageEl.value.trim()) {
+            showFormMsg('Bitte schreib eine Nachricht.', 'error');
+            messageEl.focus();
+            return;
+        }
 
         const formData = new FormData(contactForm);
         const cleanData = new URLSearchParams();
@@ -82,12 +122,12 @@ if (contactForm) {
         }
 
         if (containsFile) {
-            showToast('Dateianhänge sind nicht erlaubt.', 'error');
+            showFormMsg('Dateianhänge sind nicht erlaubt.', 'error');
             return;
         }
 
         if (cleanData.toString().length > maxChars) {
-            showToast('Deine Nachricht ist zu lang. Bitte fass dich etwas kürzer.', 'error');
+            showFormMsg('Deine Nachricht ist zu lang. Bitte fass dich etwas kürzer.', 'error');
             return;
         }
 
@@ -100,13 +140,13 @@ if (contactForm) {
             }
         }).then(function (response) {
             if (response.ok) {
-                showToast('Nachricht gesendet. Samuel meldet sich in Kürze.');
+                showFormMsg('Nachricht gesendet. Samuel meldet sich in Kürze.');
                 contactForm.reset();
             } else {
-                showToast('Ein Fehler ist aufgetreten. Bitte versuche es erneut.', 'error');
+                showFormMsg('Ein Fehler ist aufgetreten. Bitte versuche es erneut.', 'error');
             }
         }).catch(function () {
-            showToast('Verbindung fehlgeschlagen. Bitte versuche es erneut.', 'error');
+            showFormMsg('Verbindung fehlgeschlagen. Bitte versuche es erneut.', 'error');
         });
     });
 }
