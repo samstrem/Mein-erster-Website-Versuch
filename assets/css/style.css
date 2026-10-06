@@ -1322,52 +1322,20 @@ button:hover {
     }
 }
 
+/* ─── Smartphones ─── */
 @media (max-width: 560px) {
-    .hero-facts {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .cv-hero-top {
-        grid-template-columns: 1fr;
-    }
-
-    .cv-avatar {
-        width: 96px;
-        height: 96px;
-    }
-
-    .cv-card,
-    .cv-side .cv-card,
-    .cv-hero {
-        padding: 22px;
-    }
-
-    .cv-summary {
-        font-size: 1rem;
-    }
-
-    .tl-head {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .cv-card-link {
-        margin-left: 0;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 28px;
+    /* Navigation */
+    .navbar {
+        padding: 0 16px;
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 18px;
     }
 
     .nav-links a {
-        font-size: 0.66rem;
-        letter-spacing: 1px;
+        font-size: 0.68rem;
+        letter-spacing: 1.2px;
     }
 
     /* Logo already links home — keeps the nav from overflowing on phones */
@@ -1375,9 +1343,238 @@ button:hover {
         display: none;
     }
 
+    /* Startseite: Foto zuerst, kompakt */
+    .hero {
+        gap: 36px;
+        padding: calc(var(--nav-h) + 20px) 16px 48px;
+    }
+
+    .hero-photo {
+        order: -1;
+        justify-self: stretch;
+        width: calc(100% - 12px);
+        max-width: none;
+    }
+
+    .hero-photo::before {
+        inset: 12px -12px -12px 12px;
+        border-radius: 16px;
+    }
+
+    .hero-photo-frame {
+        aspect-ratio: 4 / 3;
+        border-radius: 16px;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 18px;
+    }
+
+    .hero-name {
+        font-size: clamp(2.9rem, 14vw, 3.6rem);
+        margin-bottom: 14px;
+    }
+
+    .hero-role {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 28px;
+    }
+
+    .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .hero-actions .btn {
+        justify-content: center;
+        padding: 14px 12px;
+    }
+
+    .hero-actions .btn:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .hero-facts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 32px;
+        padding-top: 20px;
+    }
+
+    .fact-label {
+        font-size: 0.58rem;
+        letter-spacing: 1.2px;
+    }
+
+    .fact-value {
+        font-size: 0.78rem;
+    }
+
+    /* Unterseiten */
+    .page {
+        padding: calc(var(--nav-h) + 28px) 16px 56px;
+    }
+
+    .page-head {
+        margin-bottom: 32px;
+    }
+
+    .page-title {
+        font-size: clamp(2.3rem, 11vw, 2.8rem);
+        margin-bottom: 16px;
+    }
+
+    .page-intro {
+        font-size: 0.93rem;
+        line-height: 1.7;
+    }
+
+    /* Projekte */
+    .project-list {
+        gap: 16px;
+    }
+
+    .project,
+    .cert-card {
+        padding: 22px 20px;
+        gap: 12px;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .project-org {
+        margin-bottom: 14px;
+    }
+
+    .project-badge {
+        border-radius: 12px;
+        letter-spacing: 0.4px;
+    }
+
+    .cert-card {
+        margin-top: 32px;
+    }
+
+    /* Lebenslauf: Kopf zentriert */
+    .cv-hero {
+        padding: 24px 20px;
+        margin-bottom: 16px;
+    }
+
+    .cv-hero-top {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 18px;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+    }
+
+    .cv-avatar {
+        width: 108px;
+        height: 108px;
+    }
+
+    .cv-name {
+        font-size: 2.2rem;
+    }
+
+    .cv-role {
+        font-size: 0.9rem;
+    }
+
+    .cv-meta {
+        justify-content: center;
+    }
+
+    .cv-hero-actions {
+        grid-column: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cv-hero-actions .btn {
+        padding: 13px 12px;
+    }
+
+    .cv-summary {
+        font-size: 1rem;
+    }
+
+    .cv-layout,
+    .cv-main,
+    .cv-side {
+        gap: 16px;
+    }
+
+    .cv-card,
+    .cv-side .cv-card {
+        padding: 22px 20px;
+    }
+
+    .cv-card-title {
+        font-size: 1.35rem;
+        margin-bottom: 22px;
+    }
+
+    .tl-item {
+        padding: 0 0 24px 24px;
+    }
+
+    .tl-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .tl-title {
+        font-size: 0.98rem;
+    }
+
+    .cv-bullets li {
+        font-size: 0.85rem;
+        padding-left: 16px;
+    }
+
+    .cv-bullets li::before {
+        left: 0;
+    }
+
+    .cv-card-link {
+        margin-left: 24px;
+    }
+
+    /* Kontakt */
+    .contact-grid {
+        gap: 28px;
+    }
+
+    .contact-card {
+        padding: 24px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Footer */
     .site-footer {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+        padding: 24px 16px;
     }
 
     .toast {
