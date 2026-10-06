@@ -3,17 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-    <meta name="description" content="Curriculum Vitae — Samuel Stremnitzer"/>
-    <meta name="keywords" content="Samuel Stremnitzer CV, Lebenslauf, Digital Business, FHWien, Berufserfahrung, Bundesministerium, SAP, IT-Support, Laborassistenz, Salzburger Landeskliniken, SPAR, Wien, Österreich"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=3"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=3"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=3"/>
+    <link rel="manifest" href="site.webmanifest"/>
+    <meta name="description" content="Curriculum Vitae — Samuel Stremnitzer, Digital Business Student & Administrative IT-Support, zertifizierter Process Analyst."/>
+    <meta name="keywords" content="Samuel Stremnitzer CV, Lebenslauf, Digital Business, FHWien, Process Analyst, BPMN 2.0, Berufserfahrung, Bundesministerium, BMLUK, SAP, Mobile Device Management, IT-Support, Laborassistenz, Salzburger Landeskliniken, SPAR, Wien, Österreich"/>
     <meta name="author" content="Samuel Stremnitzer"/>
+    <meta name="theme-color" content="#f6f4ef"/>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
     <title>CV — Samuel Stremnitzer</title>
 </head>
 <body>
@@ -23,126 +25,211 @@
         <img src="src/Logo.png" alt="SS" width="2574" height="1632">
     </a>
     <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
+        <li class="nav-home"><a href="index.html">Home</a></li>
+        <li><a href="projekte.html">Projekte</a></li>
         <li><a href="cv.html">CV</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
     </ul>
 </nav>
 
-<div class="cv-wrap">
+<main class="page page-wide">
 
-    <div class="cv-page-header">
-        <h1>Samuel<br>Stremnitzer</h1>
-        <div class="cv-contact-meta">
-            Digital Business · FHWien der WKW<br>
-            <a href="contact.html">Kontakt auf Anfrage</a>
-        </div>
-    </div>
-
-    <div class="cv-block">
-        <p class="cv-block-label">Berufserfahrung</p>
-
-        <div class="cv-entry">
-            <div>
-                <div class="cv-entry-title">Inventarverwaltung &amp; IT-Support</div>
-                <div class="cv-entry-org">Bundesministerium für Land- und Forstwirtschaft, Klima- und Umweltschutz</div>
-                <ul class="cv-bullets">
-                    <li>Eigenverantwortliche Abwicklung des operativen Einkaufs mit buchhalterischer Erfassung in SAP</li>
-                    <li>Technische Administration von Videokonferenz- und Collaboration-Systemen</li>
-                    <li>Ganzheitliches Mobile Device Management</li>
+    <header class="cv-hero page-head">
+        <div class="cv-hero-top">
+            <div class="cv-avatar">
+                <img src="src/Portrait.jpg" alt="Porträt von Samuel Stremnitzer" width="400" height="400">
+            </div>
+            <div class="cv-hero-id">
+                <p class="page-eyebrow">Lebenslauf</p>
+                <h1 class="cv-name">Samuel <em>Stremnitzer</em></h1>
+                <p class="cv-role">Digital Business Student &amp; Administrative IT-Support</p>
+                <ul class="cv-meta">
+                    <li>📍 Wien, Österreich</li>
+                    <li>🎓 FHWien der WKW</li>
+                    <li>✓ Process Analyst (GPM)</li>
                 </ul>
             </div>
-            <div class="cv-entry-date">2024 – 2026</div>
+            <div class="cv-hero-actions">
+                <a href="contact.html" class="btn">Kontakt <span class="arrow">→</span></a>
+                <a href="https://www.linkedin.com/in/samuel-stremnitzer-45377b293/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <p class="cv-summary">Als Digital-Business-Student und zertifizierter <strong>Process Analyst</strong> verbinde ich operatives IT-Know-how (SAP, MDM, IT-Support) mit strategischer Prozessgestaltung und Business Intelligence. Mit einem Fundament in BPMN 2.0, Datenmodellierung und agiler Projektarbeit agiere ich als Bindeglied zwischen Business und Technik.</p>
+    </header>
+
+    <div class="cv-layout">
+        <div class="cv-main">
+
+            <section class="cv-card reveal">
+                <h2 class="cv-card-title"><span class="cv-card-num">01</span>Berufserfahrung</h2>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Inventarverwaltung</h3>
+                            <span class="tl-date">2024 – 2026</span>
+                        </div>
+                        <p class="tl-org">Bundesministerium für Land- und Forstwirtschaft, Klima- und Umweltschutz, Regionen und Wasserwirtschaft</p>
+                        <ul class="cv-bullets">
+                            <li>Operativer Einkauf und buchhalterische Erfassung in SAP</li>
+                            <li>Technische Administration von Videokonferenz- und Collaboration-Systemen</li>
+                            <li>Ganzheitliches Mobile Device Management (MDM)</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Einzelhandelsmitarbeiter</h3>
+                            <span class="tl-date">2023 – 2024</span>
+                        </div>
+                        <p class="tl-org">SPAR Österreichische Warenhandels-AG, Einzelhandel</p>
+                        <ul class="cv-bullets">
+                            <li>Bedarfsorientierte Warenbestellung</li>
+                            <li>Mitarbeit bei Warenannahme und -lagerung sowie Reklamationsmanagement</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Laborassistenz im Zentrallabor</h3>
+                            <span class="tl-date">2022 – 2023</span>
+                        </div>
+                        <p class="tl-org">Salzburger Landeskliniken</p>
+                        <ul class="cv-bullets">
+                            <li>Erfassung und Validierung von Patientendaten sowie Probenmanagement</li>
+                            <li>Präanalytische Probenvorbereitung und Klassifizierung nach medizinischen Standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cv-card reveal">
+                <h2 class="cv-card-title"><span class="cv-card-num">02</span>Projekte</h2>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Change Management &amp; Agentic AI Implementation</h3>
+                            <span class="tl-date">09.2026 – heute</span>
+                        </div>
+                        <p class="tl-org">Prozessmanager · in Kooperation mit NOWA &amp; WKW</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Strategische Marktanalyse &amp; SCM-Konzeption</h3>
+                            <span class="tl-date">09.2025 – 01.2026</span>
+                        </div>
+                        <p class="tl-org">DB Schenker Case Study · FHWien der WKW · jahrgangsbestes Projektkonzept</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Mobile Device Rollout &amp; Security Token Management</h3>
+                            <span class="tl-date">09.2025 – 01.2026</span>
+                        </div>
+                        <p class="tl-org">IT-Projektkoordinator · BMLUK</p>
+                    </div>
+                </div>
+                <a href="projekte.html" class="cv-card-link">Alle Projekte im Detail <span class="arrow">→</span></a>
+            </section>
+
+            <section class="cv-card reveal">
+                <h2 class="cv-card-title"><span class="cv-card-num">03</span>Bildungsweg</h2>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Digital Business — Bachelor</h3>
+                            <span class="tl-date">09.2025 – heute</span>
+                        </div>
+                        <p class="tl-org">FHWien der WKW</p>
+                        <ul class="cv-bullets">
+                            <li><strong>Prozess- &amp; IT-Management:</strong> Prozessmodellierung (BPMN 2.0), Enterprise Architecture &amp; IT-Consulting</li>
+                            <li><strong>Data &amp; Development:</strong> Datenanalyse (SQL), Grundlagen der Softwareentwicklung (Python, JS) &amp; IT-Security</li>
+                            <li><strong>Digital Strategy:</strong> Agiles Projektmanagement &amp; Schnittstellenkommunikation zwischen Business und IT</li>
+                        </ul>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-head">
+                            <h3 class="tl-title">Matura — Fachrichtung Sozialmanagement</h3>
+                            <span class="tl-date">2016 – 2021</span>
+                        </div>
+                        <p class="tl-org">Höhere Lehranstalt für wirtschaftliche Berufe, Caritas Schule</p>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
-        <div class="cv-entry">
-            <div>
-                <div class="cv-entry-title">Einzelhandelsmitarbeiter</div>
-                <div class="cv-entry-org">SPAR Österreichische Warenhandels-AG</div>
-                <ul class="cv-bullets">
-                    <li>Bedarfsorientierte Warenbestellung sowie Warenannahme und -lagerung</li>
-                    <li>Reklamationsmanagement</li>
+        <aside class="cv-side">
+            <section class="cv-card cv-cert reveal">
+                <p class="cv-side-label">Zertifikat</p>
+                <h3 class="cert-title">Process Analyst</h3>
+                <p class="cert-org">Gesellschaft für Prozessmanagement</p>
+                <p class="cv-cert-text">Methodenkompetenz zur Analyse, Gestaltung und Optimierung von Geschäftsprozessen.</p>
+                <span class="cv-cert-date">gültig 07.2026 – 07.2029</span>
+            </section>
+
+            <section class="cv-card reveal" id="skills">
+                <p class="cv-side-label">Fähigkeiten</p>
+                <div class="chip-group">
+                    <p class="chip-group-title">Prozess &amp; Strategie</p>
+                    <ul class="chips">
+                        <li>BPMN 2.0</li>
+                        <li>Prozessanalyse</li>
+                        <li>Enterprise Architecture</li>
+                        <li>IT-Consulting</li>
+                        <li>Change Management</li>
+                        <li>Agiles PM</li>
+                    </ul>
+                </div>
+                <div class="chip-group">
+                    <p class="chip-group-title">IT &amp; Systeme</p>
+                    <ul class="chips">
+                        <li>SAP</li>
+                        <li>MDM</li>
+                        <li>FIDO2 / 2FA</li>
+                        <li>Collaboration-Systeme</li>
+                        <li>IT-Security</li>
+                    </ul>
+                </div>
+                <div class="chip-group">
+                    <p class="chip-group-title">Data &amp; Development</p>
+                    <ul class="chips">
+                        <li>SQL</li>
+                        <li>Business Intelligence</li>
+                        <li>Datenmodellierung</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>Agentic AI</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="cv-card reveal">
+                <p class="cv-side-label">Sprachen</p>
+                <ul class="lang-list">
+                    <li>
+                        <div class="lang-row"><span>Deutsch</span><span>Muttersprache</span></div>
+                        <div class="lang-bar"><span style="width:100%"></span></div>
+                    </li>
+                    <li>
+                        <div class="lang-row"><span>Englisch</span><span>Fließend</span></div>
+                        <div class="lang-bar"><span style="width:85%"></span></div>
+                    </li>
+                    <li>
+                        <div class="lang-row"><span>Spanisch</span><span>Grundkenntnisse</span></div>
+                        <div class="lang-bar"><span style="width:35%"></span></div>
+                    </li>
                 </ul>
-            </div>
-            <div class="cv-entry-date">2023 – 2024</div>
-        </div>
-
-        <div class="cv-entry">
-            <div>
-                <div class="cv-entry-title">Laborassistenz im Zentrallabor</div>
-                <div class="cv-entry-org">Salzburger Landeskliniken</div>
-                <ul class="cv-bullets">
-                    <li>Systemseitige Erfassung und Validierung von Patientendaten sowie Probenmanagement</li>
-                    <li>Präanalytische Probenvorbereitung und fachgerechte Klassifizierung nach medizinischen Standards</li>
-                    <li>Professionelle Patientenkommunikation und Instruktion zur qualitätsgesicherten Probenentnahme</li>
-                </ul>
-            </div>
-            <div class="cv-entry-date">2022 – 2023</div>
-        </div>
+            </section>
+        </aside>
     </div>
-
-    <div class="cv-block">
-        <p class="cv-block-label">Bildungsweg</p>
-
-        <div class="cv-entry">
-            <div>
-                <div class="cv-entry-title">Digital Business — Bachelor</div>
-                <div class="cv-entry-org">FHWien der WKW</div>
-                <ul class="cv-bullets">
-                    <li>Business Intelligence &amp; Datenanalyse: SQL, Datenmodellierung, Visualisierung, Reporting</li>
-                    <li>Prozessmanagement &amp; Digitalisierung: Geschäftsprozessanalyse, Enterprise Architecture, BPMN</li>
-                    <li>Technologie &amp; Entwicklung: JavaScript, Python, Web-Technologien, IT-Security</li>
-                    <li>Projektmanagement: Koordination von Digitalprojekten, Agile-Methodik</li>
-                </ul>
-            </div>
-            <div class="cv-entry-date">09.2025 – heute</div>
-        </div>
-
-        <div class="cv-entry">
-            <div>
-                <div class="cv-entry-title">Matura — Fachrichtung Sozialmanagement</div>
-                <div class="cv-entry-org">Höhere Lehranstalt für wirtschaftliche Berufe, Caritas Schule</div>
-            </div>
-            <div class="cv-entry-date">2016 – 2021</div>
-        </div>
-    </div>
-
-    <div class="cv-block">
-        <p class="cv-block-label">Fähigkeiten</p>
-        <ul class="cv-skills-list">
-            <li>Kollaborative Teamkoordination &amp; Ressourcenplanung</li>
-            <li>Analytisches Denken &amp; datengetriebene Problemlösung</li>
-            <li>AI- / LLM-Tools zur Effizienzsteigerung</li>
-            <li>Grundlagen der Softwareentwicklung</li>
-            <li>Automatisierung von Prozessen und Workflows</li>
-            <li>Digitale Transformation</li>
-        </ul>
-    </div>
-
-    <div class="cv-block">
-        <p class="cv-block-label">Sprachen</p>
-        <div class="cv-lang-grid">
-            <div class="cv-lang-item">
-                <div class="cv-lang-name">Deutsch</div>
-                <div class="cv-lang-level">Muttersprache</div>
-            </div>
-            <div class="cv-lang-item">
-                <div class="cv-lang-name">Englisch</div>
-                <div class="cv-lang-level">Fließend</div>
-            </div>
-            <div class="cv-lang-item">
-                <div class="cv-lang-name">Spanisch</div>
-                <div class="cv-lang-level">Grundkenntnisse</div>
-            </div>
-        </div>
-    </div>
-
-</div>
+</main>
 
 <footer class="site-footer">
     <span>© 2026 Samuel Stremnitzer</span>
-    <a href="https://www.linkedin.com/in/samuel-stremnitzer-45377b293/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="footer-links">
+        <a href="contact.html">Kontakt</a>
+        <a href="https://www.linkedin.com/in/samuel-stremnitzer-45377b293/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
 </footer>
 
 <script src="Website.js"></script>

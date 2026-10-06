@@ -1,15 +1,19 @@
 // Hero entrance animations
+var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 var heroAnims = [
     { sel: '.navbar',       delay: 0,   dir: 'up'    },
     { sel: '.hero-photo',   delay: 100, dir: 'right' },
     { sel: '.hero-eyebrow', delay: 200, dir: 'up'    },
-    { sel: '.hero-name',    delay: 350, dir: 'up'    },
-    { sel: '.hero-divider', delay: 520, dir: 'up'    },
-    { sel: '.hero-desc',    delay: 580, dir: 'up'    },
-    { sel: '.hero-actions', delay: 700, dir: 'up'    },
+    { sel: '.hero-name',    delay: 320, dir: 'up'    },
+    { sel: '.hero-role',    delay: 460, dir: 'up'    },
+    { sel: '.hero-desc',    delay: 560, dir: 'up'    },
+    { sel: '.hero-actions', delay: 660, dir: 'up'    },
+    { sel: '.hero-facts',   delay: 780, dir: 'up'    },
+    { sel: '.page-head',    delay: 100, dir: 'up'    },
 ];
 
-heroAnims.forEach(function (item) {
+if (!reduceMotion) heroAnims.forEach(function (item) {
     var el = document.querySelector(item.sel);
     if (!el) return;
 
@@ -27,6 +31,24 @@ heroAnims.forEach(function (item) {
         });
     });
 });
+
+// Scroll reveal for cards and CV sections
+var revealEls = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window && !reduceMotion) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+} else {
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
+}
 
 // Custom toast — replaces browser alert()
 function showToast(message, type) {
