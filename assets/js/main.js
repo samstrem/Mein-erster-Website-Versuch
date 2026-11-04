@@ -50,28 +50,6 @@ if ('IntersectionObserver' in window && !reduceMotion) {
     revealEls.forEach(function (el) { el.classList.add('visible'); });
 }
 
-// Custom toast — replaces browser alert()
-function showToast(message, type) {
-    let toast = document.getElementById('ss-toast');
-    if (!toast) {
-        toast = document.createElement('div');
-        toast.id = 'ss-toast';
-        toast.className = 'toast';
-        document.body.appendChild(toast);
-    }
-
-    toast.textContent = message;
-    toast.className = 'toast' + (type === 'error' ? ' toast-error' : '');
-
-    void toast.offsetWidth; // reflow so transition fires every time
-    toast.classList.add('show');
-
-    clearTimeout(toast._timer);
-    toast._timer = setTimeout(function () {
-        toast.classList.remove('show');
-    }, 4500);
-}
-
 // Active nav link
 var currentPage = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a').forEach(function (link) {
@@ -92,90 +70,8 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Inline form message (above submit button)
-function showFormMsg(message, type) {
-    var el = document.getElementById('form-msg');
-    if (!el) return;
-    el.textContent = message;
-    el.className = 'form-msg' + (type === 'error' ? ' error' : '');
-    void el.offsetWidth;
-    el.classList.add('show');
-    clearTimeout(el._timer);
-    el._timer = setTimeout(function () { el.classList.remove('show'); }, 5000);
-}
-
-// Contact form handling
-const contactForm = document.getElementById('contact_form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Honeypot: nur Bots füllen das unsichtbare Feld aus – still verwerfen
-        const honeypot = contactForm.querySelector('#website');
-        if (honeypot && honeypot.value) {
-            showFormMsg('Nachricht gesendet. Samuel meldet sich in Kürze.');
-            return;
-        }
-
-        const emailEl = contactForm.querySelector('#contact-email');
-        const messageEl = contactForm.querySelector('#message');
-
-        if (!emailEl.value.trim()) {
-            showFormMsg('Bitte gib deine E-Mail-Adresse ein.', 'error');
-            emailEl.focus();
-            return;
-        }
-        if (!emailEl.validity.valid) {
-            showFormMsg('Bitte gib eine gültige E-Mail-Adresse ein.', 'error');
-            emailEl.focus();
-            return;
-        }
-        if (!messageEl.value.trim()) {
-            showFormMsg('Bitte schreib eine Nachricht.', 'error');
-            messageEl.focus();
-            return;
-        }
-
-        const formData = new FormData(contactForm);
-        const cleanData = new URLSearchParams();
-        const maxChars = 5000;
-        let containsFile = false;
-
-        for (const [key, value] of formData.entries()) {
-            if (value instanceof File && value.name !== '') {
-                containsFile = true;
-                break;
-            }
-            cleanData.append(key, value);
-        }
-
-        if (containsFile) {
-            showFormMsg('Dateianhänge sind nicht erlaubt.', 'error');
-            return;
-        }
-
-        if (cleanData.toString().length > maxChars) {
-            showFormMsg('Deine Nachricht ist zu lang. Bitte fass dich etwas kürzer.', 'error');
-            return;
-        }
-
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: cleanData,
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        }).then(function (response) {
-            if (response.ok) {
-                showFormMsg('Nachricht gesendet. Samuel meldet sich in Kürze.');
-                contactForm.reset();
-            } else {
-                showFormMsg('Ein Fehler ist aufgetreten. Bitte versuche es erneut.', 'error');
-            }
-        }).catch(function () {
-            showFormMsg('Verbindung fehlgeschlagen. Bitte versuche es erneut.', 'error');
-        });
-    });
-}
+// E-Mail-Link erst im Browser zusammensetzen: Bots, die nur den Quelltext lesen, finden keine Adresse
+document.querySelectorAll('[data-mail-user]').forEach(function (link) {
+    link.href = 'mailto:' + link.dataset.mailUser + '@' + link.dataset.mailDomain;
+    link.hidden = false;
+});

@@ -959,6 +959,18 @@ main {
     max-width: 460px;
 }
 
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 460px;
+}
+
+.contact-links .link-card {
+    max-width: none;
+}
+
 .contact-aside .link-card {
     width: 100%;
     text-align: left;
@@ -976,6 +988,10 @@ main {
     color: var(--fg);
     text-decoration: none;
     transition: transform 0.25s var(--ease), box-shadow 0.25s, border-color 0.25s;
+}
+
+.link-card[hidden] {
+    display: none;
 }
 
 .link-card:hover {
@@ -1025,190 +1041,6 @@ main {
 
 .link-card:hover .link-card-arrow {
     transform: translate(2px, -2px);
-}
-
-.contact-card {
-    padding: 40px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-}
-
-.form-title {
-    font-family: 'Fraunces', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.form-hint {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-bottom: 28px;
-}
-
-#contact_form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 16px;
-}
-
-.form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--fg);
-}
-
-.req {
-    color: var(--accent);
-    margin-left: 2px;
-}
-
-input, select, textarea {
-    width: 100%;
-    padding: 13px 16px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--bg);
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: var(--fg);
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
-}
-
-input, select {
-    appearance: none;
-    height: 48px;
-}
-
-select {
-    background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%);
-    background-position: calc(100% - 20px) 52%, calc(100% - 15px) 52%;
-    background-size: 5px 5px;
-    background-repeat: no-repeat;
-    padding-right: 40px;
-    cursor: pointer;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 150px;
-    line-height: 1.6;
-}
-
-input:hover, select:hover, textarea:hover {
-    border-color: var(--faint);
-}
-
-input:focus, select:focus, textarea:focus {
-    border-color: var(--accent);
-    background-color: var(--surface);
-    box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-input::placeholder, textarea::placeholder {
-    color: var(--faint);
-}
-
-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 4px;
-    background: var(--accent);
-    color: #fff;
-    padding: 15px 32px;
-    border: none;
-    border-radius: 999px;
-    font-family: inherit;
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    cursor: pointer;
-    transition: transform 0.25s var(--ease), box-shadow 0.25s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px -10px rgba(31, 75, 65, 0.6);
-}
-
-/* ─── Toast Notification ─── */
-.toast {
-    position: fixed;
-    bottom: 40px;
-    right: 48px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 2px solid var(--accent);
-    border-radius: 12px;
-    padding: 20px 28px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.84rem;
-    color: var(--fg);
-    max-width: 320px;
-    line-height: 1.5;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
-    pointer-events: none;
-    z-index: 9999;
-}
-
-.toast.show {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.toast.toast-error {
-    border-top-color: #b04a3a;
-}
-
-/* ─── Inline Form Message ─── */
-.form-msg {
-    overflow: hidden;
-    max-height: 0;
-    padding: 0 20px;
-    background: var(--accent-soft);
-    border-left: 3px solid transparent;
-    border-radius: 8px;
-    font-size: 0.86rem;
-    color: var(--accent);
-    line-height: 1.5;
-    opacity: 0;
-    transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.35s ease;
-}
-
-.form-msg.show {
-    max-height: 80px;
-    padding: 16px 20px;
-    border-left-color: var(--accent);
-    opacity: 1;
-}
-
-.form-msg.error {
-    background: #f6e7e3;
-    color: #8a3426;
-}
-
-.form-msg.error.show {
-    border-left-color: #b04a3a;
 }
 
 /* ─── Footer ─── */
@@ -1336,10 +1168,6 @@ button:hover {
 
     .contact-grid {
         gap: 40px;
-    }
-
-    .contact-card {
-        padding: 28px 24px;
     }
 
     .site-footer {
@@ -1585,15 +1413,6 @@ button:hover {
         gap: 28px;
     }
 
-    .contact-card {
-        padding: 24px 18px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
     /* Footer */
     .site-footer {
         flex-direction: column;
@@ -1602,11 +1421,6 @@ button:hover {
         padding: 24px 16px;
     }
 
-    .toast {
-        right: 16px;
-        left: 16px;
-        bottom: 16px;
-    }
 }
 
 /* Sprachbalken (statt Inline-Styles, wegen strikter CSP) */
@@ -1614,11 +1428,3 @@ button:hover {
 .lang-bar .w-85  { width: 85%; }
 .lang-bar .w-35  { width: 35%; }
 
-/* Honeypot gegen Spam-Bots: für Menschen unsichtbar */
-.hp-field {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}

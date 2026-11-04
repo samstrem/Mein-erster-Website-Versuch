@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no"/>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=3"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=3"/>
@@ -14,7 +14,7 @@
     <meta name="keywords" content="Samuel Stremnitzer Kontakt, Career Opportunity, Bewerbung, Wien, Digital Business, Process Analyst, Anfrage"/>
     <meta name="author" content="Samuel Stremnitzer"/>
     <meta name="theme-color" content="#f6f4ef"/>
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
     <title>Kontakt — Samuel Stremnitzer</title>
 </head>
 <body>
@@ -36,62 +36,29 @@
         <div class="contact-aside">
             <p class="page-eyebrow">Kontakt</p>
             <h1 class="page-title">Schreib <em>mir!</em></h1>
-            <p class="page-intro">Ich freue mich über Career Opportunities, allgemeine Anfragen oder Feedback. Ich melde mich so schnell wie möglich.</p>
-            <a href="https://www.linkedin.com/in/samuel-stremnitzer-45377b293/" target="_blank" rel="noopener noreferrer" class="link-card">
-                <span class="link-card-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-                </span>
-                <span class="link-card-text">
-                    <span class="link-card-label">Lieber direkt?</span>
-                    <strong>Auf LinkedIn vernetzen</strong>
-                </span>
-                <span class="link-card-arrow" aria-hidden="true">↗</span>
-            </a>
-        </div>
-
-        <div class="contact-card">
-            <h2 class="form-title">Nachricht senden</h2>
-            <p class="form-hint">Felder mit <span class="req">*</span> sind Pflichtfelder.</p>
-            <form action="https://formspree.io/f/xgodneov" method="POST" id="contact_form" novalidate>
-                <div class="hp-field" aria-hidden="true">
-                    <label for="website">Bitte leer lassen</label>
-                    <input id="website" type="text" name="_gotcha" tabindex="-1" autocomplete="off"/>
-                </div>
-                <div class="form-row">
-                    <div class="form-field">
-                        <label for="anrede">Anrede</label>
-                        <select id="anrede" name="Anrede">
-                            <option value="">Bitte wählen</option>
-                            <option value="Herr">Herr</option>
-                            <option value="Frau">Frau</option>
-                            <option value="Divers">Divers</option>
-                        </select>
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-name">Name</label>
-                        <input id="contact-name" type="text" name="Name" placeholder="Max Mustermann" maxlength="100"/>
-                    </div>
-                </div>
-                <div class="form-field">
-                    <label for="contact-email">E-Mail <span class="req">*</span></label>
-                    <input id="contact-email" type="email" name="Email" placeholder="max@beispiel.at" maxlength="150" required/>
-                </div>
-                <div class="form-field">
-                    <label for="reason">Anliegen</label>
-                    <select id="reason" name="reason">
-                        <option value="Job">Career Opportunity</option>
-                        <option value="Question">Allgemeine Anfrage</option>
-                        <option value="Rating">Feedback</option>
-                        <option value="else">Sonstiges</option>
-                    </select>
-                </div>
-                <div class="form-field">
-                    <label for="message">Nachricht <span class="req">*</span></label>
-                    <textarea id="message" name="Message" placeholder="Deine Nachricht an Samuel …" maxlength="2000" required></textarea>
-                </div>
-                <div class="form-msg" id="form-msg" aria-live="polite"></div>
-                <button type="submit">Absenden <span aria-hidden="true">→</span></button>
-            </form>
+            <p class="page-intro">Ich freue mich über Career Opportunities, allgemeine Anfragen oder Feedback. Am direktesten erreichst du mich per E-Mail – oder du vernetzt dich mit mir auf LinkedIn.</p>
+            <div class="contact-links">
+                <a href="#" class="link-card" data-mail-user="sam.strem" data-mail-domain="hotmail.com" hidden>
+                    <span class="link-card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </span>
+                    <span class="link-card-text">
+                        <span class="link-card-label">Am direktesten</span>
+                        <strong>E-Mail schreiben</strong>
+                    </span>
+                    <span class="link-card-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="https://www.linkedin.com/in/samuel-stremnitzer-45377b293/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-card-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                    </span>
+                    <span class="link-card-text">
+                        <span class="link-card-label">Lieber vernetzen?</span>
+                        <strong>Auf LinkedIn vernetzen</strong>
+                    </span>
+                    <span class="link-card-arrow" aria-hidden="true">↗</span>
+                </a>
+            </div>
         </div>
     </div>
 </main>
@@ -104,6 +71,6 @@
     </div>
 </footer>
 
-<script src="assets/js/main.js?v=5"></script>
+<script src="assets/js/main.js?v=6"></script>
 </body>
 </html>

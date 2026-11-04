@@ -10,11 +10,11 @@ Persönliche Website von Samuel Stremnitzer – Digital Business Student & Proce
 ├── index.html            Startseite
 ├── projekte.html         Ausgewählte Projekte & Zertifizierung
 ├── cv.html               Lebenslauf
-├── contact.html          Kontaktformular (Formspree)
+├── contact.html          Kontakt (E-Mail- und LinkedIn-Link)
 │
 ├── assets/
 │   ├── css/style.css     Komplettes Styling
-│   ├── js/main.js        Animationen, aktive Navigation, Formularversand
+│   ├── js/main.js        Animationen, aktive Navigation, E-Mail-Link
 │   ├── img/              Logo und Fotos
 │   └── icons/            Favicons & App-Icons
 │
@@ -38,9 +38,10 @@ Persönliche Website von Samuel Stremnitzer – Digital Business Student & Proce
 ## Sicherheit
 
 - Jede Seite hat eine **Content-Security-Policy** (`<meta http-equiv="Content-Security-Policy">`): Es dürfen nur Dateien
-  von der eigenen Domain geladen werden, Daten gehen nur an `formspree.io`. Wer eine externe Ressource einbindet
+  von der eigenen Domain geladen werden, Formulare sind gesperrt (`form-action 'none'`). Wer eine externe Ressource einbindet
   (Schrift, Skript, Widget …), muss die Policy in allen vier HTML-Dateien erweitern – sonst blockiert der Browser sie.
 - **Schriften sind selbst gehostet** (`assets/fonts/`), es gibt keine Verbindung zu Google.
 - Keine Inline-Skripte und keine Inline-Styles (`style="…"`) – Styling gehört in `style.css`.
-- Das Kontaktformular hat ein unsichtbares Spam-Feld (`_gotcha`).
+- Es gibt **kein Kontaktformular** und damit keinen Drittanbieter, der Besucherdaten verarbeitet. Die E-Mail-Adresse steht nicht im HTML,
+  sondern wird von `main.js` erst im Browser zusammengesetzt (Schutz vor Spam-Bots).
 - GitHub Pages kann keine eigenen HTTP-Header setzen (HSTS, X-Frame-Options) – das ist eine Einschränkung des Hosters.
