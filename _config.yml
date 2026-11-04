@@ -1,0 +1,5 @@
+# Jekyll-Einstellungen für GitHub Pages.
+# Diese Dateien bleiben im Repo, werden aber nicht unter der Domain ausgeliefert.
+exclude:
+  - CLAUDE.md
+  - scripts
