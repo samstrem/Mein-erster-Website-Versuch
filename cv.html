@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no"/>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'"/>
     <link rel="icon" type="image/x-icon" href="favicon.ico?v=3"/>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png?v=3"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png?v=3"/>
@@ -13,10 +14,7 @@
     <meta name="keywords" content="Samuel Stremnitzer CV, Lebenslauf, Digital Business, FHWien, Process Analyst, BPMN 2.0, Berufserfahrung, Bundesministerium, BMLUK, SAP, Mobile Device Management, IT-Support, Laborassistenz, Salzburger Landeskliniken, SPAR, Wien, Österreich"/>
     <meta name="author" content="Samuel Stremnitzer"/>
     <meta name="theme-color" content="#f6f4ef"/>
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
     <title>CV — Samuel Stremnitzer</title>
 </head>
 <body>
@@ -209,15 +207,15 @@
                 <ul class="lang-list">
                     <li>
                         <div class="lang-row"><span>Deutsch</span><span>Muttersprache</span></div>
-                        <div class="lang-bar"><span style="width:100%"></span></div>
+                        <div class="lang-bar"><span class="w-100"></span></div>
                     </li>
                     <li>
                         <div class="lang-row"><span>Englisch</span><span>Fließend</span></div>
-                        <div class="lang-bar"><span style="width:85%"></span></div>
+                        <div class="lang-bar"><span class="w-85"></span></div>
                     </li>
                     <li>
                         <div class="lang-row"><span>Spanisch</span><span>Grundkenntnisse</span></div>
-                        <div class="lang-bar"><span style="width:35%"></span></div>
+                        <div class="lang-bar"><span class="w-35"></span></div>
                     </li>
                 </ul>
             </section>
@@ -233,6 +231,6 @@
     </div>
 </footer>
 
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/main.js?v=5"></script>
 </body>
 </html>

@@ -111,6 +111,13 @@ if (contactForm) {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
 
+        // Honeypot: nur Bots füllen das unsichtbare Feld aus – still verwerfen
+        const honeypot = contactForm.querySelector('#website');
+        if (honeypot && honeypot.value) {
+            showFormMsg('Nachricht gesendet. Samuel meldet sich in Kürze.');
+            return;
+        }
+
         const emailEl = contactForm.querySelector('#contact-email');
         const messageEl = contactForm.querySelector('#message');
 

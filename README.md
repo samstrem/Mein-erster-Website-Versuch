@@ -34,3 +34,13 @@ Persönliche Website von Samuel Stremnitzer – Digital Business Student & Proce
 3. Committen und pushen – GitHub Pages ist nach 1–2 Minuten aktualisiert.
 
 > Nur lokal arbeiten, nicht zusätzlich direkt auf GitHub editieren – sonst entstehen Merge-Konflikte.
+
+## Sicherheit
+
+- Jede Seite hat eine **Content-Security-Policy** (`<meta http-equiv="Content-Security-Policy">`): Es dürfen nur Dateien
+  von der eigenen Domain geladen werden, Daten gehen nur an `formspree.io`. Wer eine externe Ressource einbindet
+  (Schrift, Skript, Widget …), muss die Policy in allen vier HTML-Dateien erweitern – sonst blockiert der Browser sie.
+- **Schriften sind selbst gehostet** (`assets/fonts/`), es gibt keine Verbindung zu Google.
+- Keine Inline-Skripte und keine Inline-Styles (`style="…"`) – Styling gehört in `style.css`.
+- Das Kontaktformular hat ein unsichtbares Spam-Feld (`_gotcha`).
+- GitHub Pages kann keine eigenen HTTP-Header setzen (HSTS, X-Frame-Options) – das ist eine Einschränkung des Hosters.

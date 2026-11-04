@@ -1,3 +1,28 @@
+/* ─── Schriften (selbst gehostet, OFL-Lizenz) ─── */
+@font-face {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('../fonts/dm-sans-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400 600;
+    font-display: swap;
+    src: url('../fonts/fraunces-latin.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/fraunces-italic-latin.woff2') format('woff2');
+}
+
 :root {
     --bg: #f6f4ef;
     --surface: #ffffff;
@@ -1582,4 +1607,18 @@ button:hover {
         left: 16px;
         bottom: 16px;
     }
+}
+
+/* Sprachbalken (statt Inline-Styles, wegen strikter CSP) */
+.lang-bar .w-100 { width: 100%; }
+.lang-bar .w-85  { width: 85%; }
+.lang-bar .w-35  { width: 35%; }
+
+/* Honeypot gegen Spam-Bots: für Menschen unsichtbar */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
