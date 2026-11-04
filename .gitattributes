@@ -1,0 +1,4 @@
+# Skripte immer mit LF, sonst brechen sie unter Linux (GitHub Actions), wenn Windows CRLF daraus macht
+*.sh text eol=lf
+.githooks/* text eol=lf
+.github/workflows/*.yml text eol=lf

@@ -1,0 +1,20 @@
+name: Sicherheits- und Datenschutzprüfung
+
+on:
+  push:
+  pull_request:
+
+# Nur Lesezugriff: Die Prüfung braucht keine Schreibrechte und keine Secrets.
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      # Auf festen Commit gepinnt (v4.2.2), damit eine manipulierte Version nicht nachgeladen wird.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - run: bash scripts/check.sh --ci

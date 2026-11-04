@@ -42,6 +42,9 @@ Persönliche Website von Samuel Stremnitzer – Digital Business Student & Proce
   (Schrift, Skript, Widget …), muss die Policy in allen vier HTML-Dateien erweitern – sonst blockiert der Browser sie.
 - **Schriften sind selbst gehostet** (`assets/fonts/`), es gibt keine Verbindung zu Google.
 - Keine Inline-Skripte und keine Inline-Styles (`style="…"`) – Styling gehört in `style.css`.
-- Es gibt **kein Kontaktformular** und damit keinen Drittanbieter, der Besucherdaten verarbeitet. Die E-Mail-Adresse steht nicht im HTML,
-  sondern wird von `main.js` erst im Browser zusammengesetzt (Schutz vor Spam-Bots).
+- Es gibt **kein Kontaktformular** und damit keinen Drittanbieter, der Besucherdaten verarbeitet. Die E-Mail-Adresse steht nicht als fertiger
+  Link im HTML: Nutzer- und Domain-Teil stehen getrennt in `data-mail-*`-Attributen und `main.js` setzt sie erst im Browser zusammen.
+  Das hält einfache Spam-Bots ab, ein gezielter Scraper setzt sie trotzdem zusammen.
+- `scripts/check.sh` prüft die Regeln aus `CLAUDE.md` (CSP, keine Drittanbieter, kein Inline-Code, keine Telefonnummern, E-Mails oder Secrets).
+  Es läuft als pre-commit-Hook (einmalig `git config core.hooksPath .githooks`) und bei jedem Push in GitHub Actions.
 - GitHub Pages kann keine eigenen HTTP-Header setzen (HSTS, X-Frame-Options) – das ist eine Einschränkung des Hosters.

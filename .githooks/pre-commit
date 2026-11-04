@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Läuft vor jedem Commit und blockiert ihn bei Verstößen gegen die Regeln in CLAUDE.md.
+# Einmalig pro Klon aktivieren:  git config core.hooksPath .githooks
+exec bash "$(git rev-parse --show-toplevel)/scripts/check.sh" --staged
