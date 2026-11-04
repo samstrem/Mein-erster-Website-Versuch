@@ -136,13 +136,15 @@ report fail show "Keine Schlüssel- oder .env-Dateien im Repo" \
 
 # ---------------------------------------------------------------- 7. Repo-Hygiene
 section "Repo-Hygiene"
-if git ls-files --error-unmatch CLAUDE.local.md >/dev/null 2>&1; then
-    fail "CLAUDE.local.md ist im Repo (private Notizen dürfen nie veröffentlicht werden)"
-elif git check-ignore -q CLAUDE.local.md; then
-    ok "CLAUDE.local.md ist von Git ausgeschlossen"
-else
-    fail "CLAUDE.local.md steht nicht in .gitignore"
-fi
+for private in CLAUDE.local.md DEVLOG.local.md; do
+    if git ls-files --error-unmatch "$private" >/dev/null 2>&1; then
+        fail "$private ist im Repo (private Notizen dürfen nie veröffentlicht werden)"
+    elif git check-ignore -q "$private"; then
+        ok "$private ist von Git ausgeschlossen"
+    else
+        fail "$private steht nicht in .gitignore"
+    fi
+done
 if [ "$MODE" != "--ci" ]; then
     email="$(git config user.email)"
     case "$email" in

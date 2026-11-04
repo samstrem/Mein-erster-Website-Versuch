@@ -74,6 +74,15 @@ Ziele: DSGVO-Konformität, Sicherheit nach OWASP-Maßstab, kritische Zusammenarb
 - Was eine Sitzung überleben soll (Entscheidungen, offene Punkte), steht in `CLAUDE.local.md`. Schlage `/clear` vor, wenn ein Thema abgeschlossen
   ist und der Verlauf nicht mehr gebraucht wird, und sichere vorher den Stand dort. Ausführen kann `/clear` nur der Nutzer.
 
+## Devlog
+
+- Führe einen lokalen Devlog in `DEVLOG.local.md` (von Git ausgeschlossen, nie veröffentlichen). Neuester Eintrag oben.
+- Schreibe einen Eintrag, sobald ein Thema abgeschlossen ist, und immer bevor du `/clear` vorschlägst. Das Sitzungsende kannst du nicht erkennen.
+- Ein Eintrag hat höchstens etwa 15 Zeilen: Datum, was getan wurde, Entscheidungen mit Begründung, was bewusst nicht getan wurde, nächster Schritt.
+- Der Devlog ist der Verlauf, der aktuelle Stand offener Punkte steht in `CLAUDE.local.md`. Verweise dorthin, statt Punkte doppelt zu führen.
+- Zu Sitzungsbeginn nur die ersten etwa 40 Zeilen lesen, den Rest nur bei Bedarf.
+- Keine Telefonnummern, E-Mail-Adressen, Zugangsdaten oder Verifizierungscodes eintragen.
+
 ## Sprache
 
 Antworten auf Deutsch. Code und Kommentare im vorhandenen Stil.
