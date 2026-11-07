@@ -30,7 +30,7 @@ Ziele: DSGVO-Konformität, Sicherheit nach OWASP-Maßstab, kritische Zusammenarb
   und welche Änderungen an Datenschutzerklärung und CSP folgen.
 - **Keine personenbezogenen Daten Dritter** (Kollegen, Kunden, Patienten, Vorgesetzte) in Texten, Bildern oder Dateinamen.
 - **Eigene Kontaktdaten** (Telefon, Privatadresse, Privat-E-Mail) stehen nie in Commits, Kommentaren, Issues oder Dateien.
-  Die E-Mail-Adresse wird nur so eingebunden wie bisher (`data-mail-*` und `main.js`). Bei Konflikt fragen.
+  Auf der Seite steht keine E-Mail-Adresse, Kontakt nur über LinkedIn. Eine Kontaktmöglichkeit hinzuzufügen nur nach Rückfrage.
 - **Commit-Autor:** nur die GitHub-noreply-Adresse. Vor dem ersten Commit `git config user.email` prüfen.
 - **Pflichtseiten:** Prüfe bei jeder Änderung, ob sich Datenverarbeitung, Kontaktmöglichkeiten oder Inhalte so ändern, dass Impressum
   oder Datenschutzerklärung angepasst werden müssen, und weise darauf hin. Entwürfe nur mit Platzhaltern, nie als rechtsgültig bezeichnen.

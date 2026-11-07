@@ -69,9 +69,3 @@ window.addEventListener('scroll', function () {
         navbar.classList.remove('scrolled');
     }
 });
-
-// E-Mail-Link erst im Browser zusammensetzen: Bots, die nur den Quelltext lesen, finden keine Adresse
-document.querySelectorAll('[data-mail-user]').forEach(function (link) {
-    link.href = 'mailto:' + link.dataset.mailUser + '@' + link.dataset.mailDomain;
-    link.hidden = false;
-});
